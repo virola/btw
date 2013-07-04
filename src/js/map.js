@@ -51,6 +51,11 @@ var util = (function () {
 
 })();
 
+
+// 添加折线
+// http://developer.baidu.com/map/jsdemo.htm#c1_5
+
+
 var Map = (function() {
     var exports = {};
 
@@ -59,6 +64,12 @@ var Map = (function() {
     function init( id ) {
         oMap = new BMap.Map(id);
         oMap.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+
+        oMap.addControl(new BMap.NavigationControl());  //添加默认缩放平移控件
+        // oMap.addControl(new BMap.NavigationControl({
+        //     anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL
+        // }));  //右上角，仅包含平移和缩放按钮
+
     };
 
     var routes = {};
