@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>顺路么</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="dep/bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" href="dep/bootstrap/css/bootstrap-responsive.css" />
+
+<link rel="stylesheet" href="src/css/map.css" />
+<script src="dep/html5shiv.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container">
+            <a href="./" class="brand">顺路么 shunlu.me</a>
+        </div>
+    </div>
+</nav>
+
+<section class="container">
+    <form id="add-route-form" class="form-inline" action="src/test/success.json">
+        <fieldset>
+            <legend>顺路路径</legend>
+            <input type="text" class="input-small" name="start" placeholder="起点...">
+            <i class="icon-arrow-right"></i>
+            <input type="text" class="input-small" name="end" placeholder="终点...">
+            
+            <button type="submit" class="btn btn-primary">提交</button>
+        </fieldset>
+    </form>
+</section>
+
+
+<div id="route-map"></div>
+
+<footer class="footer">&copy;2013. <a href="http://shunlu.me">shunlu.me</a></footer>
+
+<script src="dep/jquery.js"></script>
+<script src="dep/bootstrap/js/bootstrap.js"></script>
+
+<script src="http://api.map.baidu.com/api?v=1.5&ak=E6eb3995db0e6a4565711ddc15f2d02a"></script>
+
+
+<script src="src/js/map.js"></script>
+</body>
+</html>
